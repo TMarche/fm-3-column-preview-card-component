@@ -68,6 +68,10 @@ body {
         flex-direction: column;
         /* max-width: 300px; */
     }
+
+    .content-container {
+        height: auto;
+    }
 }
 
 /* Buttons */
@@ -76,6 +80,7 @@ body {
     outline: none;
     border: none;
     border-radius: 10rem;
+    width: 15rem;
     padding: 1rem 2.5rem;
     box-shadow: var(--clr-very-light-gray) 0 0 0 .2rem;
     display: inline-block;
@@ -105,15 +110,8 @@ body {
 img {
     display: block;
     max-width: 100%;
-    width: 80px;
+    width: 60px;
 }
-
-@media (max-width: 600px) {
-    img {
-        width: 45px;
-    }
-}
-
 
 /* Typography */
 body {
@@ -138,17 +136,9 @@ body {
 /* Sections */
 .flex-item {
     padding: 4rem;
-    position: relative;
     max-width: 300px;
     display: flex;
     flex-direction: column;
-}
-
-@media (max-width: 600px) {
-    /* .flex-item {
-        height: 300px;
-    } */
-
 }
 
 /* Sedans Section */
