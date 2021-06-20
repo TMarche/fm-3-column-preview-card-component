@@ -1,0 +1,197 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* Custom properties -- update these for your own design */
+
+:root {
+    --ff-primary: 'Lexend Deca', sans-serif;
+    --ff-header: 'Big Shoulders Display', sans-serif;
+
+    --fw-reg: 400;
+    --fw-bold: 700;
+    
+    --clr-bright-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+    --clr-transparent-white: hsla(0, 0%, 100%, 0.75);
+    --clr-very-light-gray: hsl(0, 0%, 95%);
+
+    --fs-h1: 4rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+body {
+    background: var(--clr-very-light-gray);
+    color: var(--clr-very-light-gray);
+    font-size: 1.5rem;
+}
+
+/* @media (max-width: 600px) {
+    body {
+        font-size: 1.2rem;
+    }
+} */
+
+/* Layout */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.flex-container {
+    max-width: 144rem;
+    display: flex;
+    flex-direction:row;
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+        max-width: 300px;
+    }
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--clr-very-light-gray);
+    outline: none;
+    border: none;
+    border-radius: 10rem;
+    padding: 1rem 2.5rem;
+    box-shadow: var(--clr-very-light-gray) 0 0 0 .2rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--clr-very-light-gray);
+    box-shadow: var(--clr-very-light-gray) 0 0 0 .2rem;
+}
+
+.section__button--sedans {
+    color: var(--clr-bright-orange);
+}
+
+.section__button--suvs {
+    color: var(--clr-dark-cyan);
+}
+
+.section__button--luxury {
+    color: var(--clr-very-dark-cyan);
+}
+
+/* Images */
+img {
+    display: block;
+    max-width: 100%;
+    width: 80px;
+}
+
+@media (max-width: 600px) {
+    img {
+        width: 45px;
+    }
+}
+
+
+/* Typography */
+body {
+    font-family: var(--ff-primary);
+}
+
+.section__title {
+    font-family: var(--ff-header);
+    font-size: var(--fs-h1);
+    text-transform: uppercase;
+}
+
+.section__content {
+    color: var(--clr-transparent-white);
+    line-height: 1.6;
+}
+
+.btn {
+    font-family: var(--ff-primary);
+    position: absolute;
+    bottom: 4rem;
+}
+
+/* Sections */
+.flex-item {
+    padding: 4rem;
+    /* height: 600px; */
+    position: relative;
+    max-width: 300px;
+}
+
+@media (max-width: 600px) {
+    /* .flex-item {
+        height: 300px;
+    } */
+
+    .btn {
+        position: relative;
+        bottom: 0;
+        margin-top: 3rem;
+    }
+}
+
+/* Sedans Section */
+.sedans {
+    background-color: var(--clr-bright-orange);
+    border-radius: 1rem 0 0 1rem;
+}
+
+.section__title {
+    margin-top: 3rem;
+}
+
+.section__content {
+    margin-top: 3rem;
+}
+
+/* SUVs Section */
+.suvs {
+    background-color: var(--clr-dark-cyan);
+}
+
+/* Luxury Section */
+.luxury {
+    background-color: var(--clr-very-dark-cyan);
+    border-radius: 0 1rem 1rem 0;
+}
+
+@media (max-width: 600px) {
+    .sedans {
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .luxury {
+        border-radius: 0 0 1rem 1rem;
+    }
+}
+
+/* Attribution Section */
+.attribution {
+    margin-top: 1rem;
+    color: black;
+}
