@@ -28,7 +28,7 @@ html {
     --fs-h1: 4rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
-    --fs-body: 1rem;
+    --fs-body: 1.5rem;
 
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
@@ -37,7 +37,7 @@ html {
 body {
     background: var(--clr-very-light-gray);
     color: var(--clr-very-light-gray);
-    font-size: 1.5rem;
+    font-size: var(--fs-body);
 }
 
 /* @media (max-width: 600px) {
@@ -60,13 +60,13 @@ body {
     display: flex;
     flex-direction:row;
     border-radius: 1rem;
-    margin: 0 auto;
+    margin: 4rem;
 }
 
 @media (max-width: 600px) {
     .flex-container {
         flex-direction: column;
-        max-width: 300px;
+        /* max-width: 300px; */
     }
 }
 
@@ -78,6 +78,8 @@ body {
     border-radius: 10rem;
     padding: 1rem 2.5rem;
     box-shadow: var(--clr-very-light-gray) 0 0 0 .2rem;
+    display: inline-block;
+    margin-top: auto;
 }
 
 .btn:hover {
@@ -131,16 +133,15 @@ body {
 
 .btn {
     font-family: var(--ff-primary);
-    position: absolute;
-    bottom: 4rem;
 }
 
 /* Sections */
 .flex-item {
     padding: 4rem;
-    /* height: 600px; */
     position: relative;
     max-width: 300px;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 600px) {
@@ -148,11 +149,6 @@ body {
         height: 300px;
     } */
 
-    .btn {
-        position: relative;
-        bottom: 0;
-        margin-top: 3rem;
-    }
 }
 
 /* Sedans Section */
@@ -167,6 +163,7 @@ body {
 
 .section__content {
     margin-top: 3rem;
+    margin-bottom: 6rem;
 }
 
 /* SUVs Section */
@@ -187,6 +184,10 @@ body {
 
     .luxury {
         border-radius: 0 0 1rem 1rem;
+    }
+
+    .section__content {
+        margin-bottom: 2rem;
     }
 }
 
