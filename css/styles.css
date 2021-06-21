@@ -54,7 +54,7 @@ body {
     margin: 4rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 740px) {
     .flex-container {
         flex-direction: column;
     }
@@ -161,7 +161,7 @@ body {
     border-radius: 0 1rem 1rem 0;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 740px) {
     .sedans {
         border-radius: 1rem 1rem 0 0;
     }
